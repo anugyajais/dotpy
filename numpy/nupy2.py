@@ -8,7 +8,7 @@ def saveInfo():
         with open(user_data, "a") as file1, open(pswd_data,"a")as file2:
             file1.write(user+"\n")
             file2.write(pswd+"\n")
-            flag=int(input("Enter 1 to continue or  0 to exit"))
+            flag=int(input("~Enter 1 to continue or  0 to exit~\n"))
             if(flag==0):
                 break  
         
@@ -19,10 +19,10 @@ def loadInfo(uname):
     
     if uname in user_arr:
         pos= list(user_arr).index(uname)
-        print("~THe password is: ~\n")
+        print("~The password is: ~\n")
         print(pswd_arr[pos])
     else:
-        print("Username does not exist -_-")
+        print("Sorry, Username does not exist -_-\n~Try again~")
        
 def user_choice(choice):
     match choice:
@@ -39,7 +39,7 @@ pswd_data="password.txt";
 #     pass
 # with open(pswd_data, "w") as file:
 #     pass
-option=int(input("~~ENTER YOUR CHOICE~~\n1 for saving username and password\n\n2 for finding the password for the username\n\n0 to EXIT"))
+option=int(input("~~ENTER YOUR CHOICE~~\n1 for saving username and password\n\n2 for finding the password for the username\n\n0 to EXIT\n"))
 while(option!=0):
     user_choice(option)
-    option=int(input("ENTER\n1 for saving username and password\n\n2 for finding the password for the username\n\n0 to EXIT"))
+    option=int(input("~~ENTER YOUR CHOICE~~\n1 for saving username and password\n\n2 for finding the password for the username\n\n0 to EXIT\n"))
