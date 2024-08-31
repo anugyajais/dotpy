@@ -14,11 +14,11 @@ def saveInfo():
         
 def loadInfo(uname):
      # with open(user_data, "r") as file1, open(pswd_data,"r")as file2:
-    user_arr=np.loadtxt(user_data,dtype=str,delimiter='\n')
-    pswd_arr=np.loadtxt(pswd_data,dtype=str,delimiter='\n')
+    user_arr=np.loadtxt(user_data,dtype=str)
+    pswd_arr=np.loadtxt(pswd_data,dtype=str)
     
     if uname in user_arr:
-        pos= user_arr.index(uname)
+        pos= list(user_arr).index(uname)
         print("~THe password is: ~\n")
         print(pswd_arr[pos])
     else:
